@@ -1,15 +1,15 @@
 //
-//  TestTests.swift
-//  TestTests
+//  BreadCrumbs_Working_CopyTests.swift
+//  BreadCrumbs Working CopyTests
 //
-//  Created by Joseph Straceski on 11/23/15.
-//  Copyright (c) 2015 Joseph Straceski. All rights reserved.
+//  Created by Tavish Peckham on 11/30/15.
+//  Copyright © 2015 Tavish Peckham. All rights reserved.
 //
 
-import UIKit
 import XCTest
+@testable import BreadCrumbs_Working_Copy
 
-class TestTests: XCTestCase {
+class BreadCrumbs_Working_CopyTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -23,12 +23,12 @@ class TestTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measureBlock {
             // Put the code you want to measure the time of here.
         }
     }
