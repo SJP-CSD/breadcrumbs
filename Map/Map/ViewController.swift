@@ -7,19 +7,45 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
+    @IBOutlet weak var outputLabel: UILabel!
+    
+    var locationManager = CLLocationManager()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func getLocation(sender: AnyObject) {
+        locationManager.startUpdatingLocation()
+        print("bruh")
     }
-
-
+    
+    func locationManager(manager: CLLocationManager!,
+        didUpdateLocations locations: [AnyObject]!)
+    {
+        // Handle location updates here
+        outputLabel.text = "bruh"
+        print("brah")
+    }
+    
+    func locationManager(manager: CLLocationManager!,
+        didFailWithError error: NSError!)
+    {
+        // Handle errors here 
+        print("breh")
+        outputLabel.text = "breh"
+    }
 }
 
