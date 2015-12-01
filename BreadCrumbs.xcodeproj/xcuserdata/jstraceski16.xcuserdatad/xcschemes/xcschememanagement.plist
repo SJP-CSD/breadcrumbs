@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BreadCrumbs Working Copy.xcscheme</key>
+		<key>BreadCrumbs.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6C8735361C0CA10C001DDB29</key>
+		<key>F0AAD5751C0E14A400F242F9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6C87354D1C0CA10C001DDB29</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6C8735581C0CA10C001DDB29</key>
+		<key>F0AAD58A1C0E14A500F242F9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
