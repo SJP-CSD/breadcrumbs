@@ -42,6 +42,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         outputLabel.text = "\(locValue.latitude) \(locValue.longitude)"
+        //MATT MATT MATT MATT MATT MATT
+        //MATT MATT MATT MATT MATT MATT
+        //MATT MATT MATT MATT MATT MATT
+        //MATT MATT MATT MATT MATT MATT
+        //MATT MATT MATT MATT MATT MATT
+        //MATT MATT MATT MATT MATT MATT
+        //in this method, locValue stores the location in a CLLocationCoordinate2D
+        //if that helps you,
+        //for putting it into map and stuff
+        
     }
     
     func locationManager(manager: CLLocationManager,
