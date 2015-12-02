@@ -164,6 +164,8 @@
 		5051FDCB1C0E123400CBDD76 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "William Parker";
 				TargetAttributes = {
@@ -417,6 +419,7 @@
 				5051FDF41C0E123400CBDD76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5051FDF51C0E123400CBDD76 /* Build configuration list for PBXNativeTarget "MapTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +428,7 @@
 				5051FDF71C0E123400CBDD76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

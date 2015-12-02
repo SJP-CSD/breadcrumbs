@@ -29,22 +29,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBAction func getLocation(sender: AnyObject) {
         locationManager.startUpdatingLocation()
-        print("bruh")
+        print("bruh", terminator: "")
     }
     
-    func locationManager(manager: CLLocationManager!,
-        didUpdateLocations locations: [AnyObject]!)
+    func locationManager(manager: CLLocationManager,
+        didUpdateLocations locations: [CLLocation])
     {
         // Handle location updates here
         outputLabel.text = "bruh"
-        print("brah")
+        print("brah", terminator: "")
     }
     
-    func locationManager(manager: CLLocationManager!,
-        didFailWithError error: NSError!)
+    func locationManager(manager: CLLocationManager,
+        didFailWithError error: NSError)
     {
         // Handle errors here 
-        print("breh")
+        print("breh", terminator: "")
         outputLabel.text = "breh"
     }
 }
