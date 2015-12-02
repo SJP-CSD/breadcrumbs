@@ -14,17 +14,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var outputLabel: UILabel!
     
-    var locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        print("hi")
         locationManager.requestAlwaysAuthorization()
-        locationManager.requestWhenInUseAuthorization()
         
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+        else {
+            print("Location Services Disabled")
+        }
     }
 
     @IBAction func getLocation(sender: AnyObject) {
@@ -32,12 +37,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         print("bruh", terminator: "")
     }
     
-    func locationManager(manager: CLLocationManager,
-        didUpdateLocations locations: [CLLocation])
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
-        // Handle location updates here
-        outputLabel.text = "bruh"
-        print("brah", terminator: "")
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        outputLabel.text = "\(locValue.latitude) \(locValue.longitude)"
     }
     
     func locationManager(manager: CLLocationManager,
