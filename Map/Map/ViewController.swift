@@ -10,56 +10,54 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var outputLabel: UILabel!
-    
     let locationManager = CLLocationManager()
     
+    @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("hi")
         locationManager.requestAlwaysAuthorization()
+        mapView.delegate = self
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.distanceFilter = 1
+            
             locationManager.startUpdatingLocation()
         }
         else {
             print("Location Services Disabled")
         }
+        
     }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        outputLabel.text = "\(locValue.latitude) \(locValue.longitude)"
 
-    @IBAction func getLocation(sender: AnyObject) {
-        locationManager.startUpdatingLocation()
-        print("bruh", terminator: "")
+      mapView.setRegion(MKCoordinateRegionMake(locValue, MKCoordinateSpanMake(0, 0)), animated: true)
+        //Find out what coordinate thing does
     }
+    /*  XCODE 7 XCPODE 7 XKPDE 7 ZKDD 7
     
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
-        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        outputLabel.text = "\(locValue.latitude) \(locValue.longitude)"
-        //MATT MATT MATT MATT MATT MATT
-        //MATT MATT MATT MATT MATT MATT
-        //MATT MATT MATT MATT MATT MATT
-        //MATT MATT MATT MATT MATT MATT
-        //MATT MATT MATT MATT MATT MATT
-        //MATT MATT MATT MATT MATT MATT
-        //in this method, locValue stores the location in a CLLocationCoordinate2D
-        //if that helps you,
-        //for putting it into map and stuff
-        
-    }
+    let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+    outputLabel.text = "\(locValue.latitude) \(locValue.longitude)"
+    
+    mapView.setRegion(MKCoordinateRegionMake(locValue, MKCoordinateSpanMake(0, 0)), animated: true)
+    //Find out what coordinate thing does
+    }*/
     
     func locationManager(manager: CLLocationManager,
         didFailWithError error: NSError)
     {
-        // Handle errors here 
-        print("breh", terminator: "")
-        outputLabel.text = "breh"
+        outputLabel.text = "Could Not Retrieve Location"
     }
 }
 
