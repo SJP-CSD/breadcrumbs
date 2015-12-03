@@ -15,7 +15,6 @@
 		F0AAD5921C0E14A500F242F9 /* BreadCrumbsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AAD5911C0E14A500F242F9 /* BreadCrumbsTests.swift */; };
 		F0AAD59C1C0E19C700F242F9 /* 4253ce56e78d9a49ee8ef2d7cb2d295e_400x400.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AAD59B1C0E19C700F242F9 /* 4253ce56e78d9a49ee8ef2d7cb2d295e_400x400.png */; };
 		F0AAD59E1C0E19F900F242F9 /* 9296984.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AAD59D1C0E19F900F242F9 /* 9296984.png */; };
-		F0DC19F01C107B70005BBF53 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC19EF1C107B70005BBF53 /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 		F0AAD5911C0E14A500F242F9 /* BreadCrumbsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadCrumbsTests.swift; sourceTree = "<group>"; };
 		F0AAD59B1C0E19C700F242F9 /* 4253ce56e78d9a49ee8ef2d7cb2d295e_400x400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4253ce56e78d9a49ee8ef2d7cb2d295e_400x400.png; sourceTree = "<group>"; };
 		F0AAD59D1C0E19F900F242F9 /* 9296984.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9296984.png; sourceTree = "<group>"; };
-		F0DC19EF1C107B70005BBF53 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +81,6 @@
 		F0AAD5781C0E14A400F242F9 /* BreadCrumbs */ = {
 			isa = PBXGroup;
 			children = (
-				F0DC19EF1C107B70005BBF53 /* HomeScreen.swift */,
 				F0AAD57D1C0E14A400F242F9 /* ViewController.swift */,
 				F0AAD57F1C0E14A400F242F9 /* Main.storyboard */,
 				F0AAD5821C0E14A400F242F9 /* Images.xcassets */,
@@ -225,7 +222,6 @@
 			files = (
 				F0AAD57E1C0E14A400F242F9 /* ViewController.swift in Sources */,
 				F0AAD57C1C0E14A400F242F9 /* AppDelegate.swift in Sources */,
-				F0DC19F01C107B70005BBF53 /* HomeScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
