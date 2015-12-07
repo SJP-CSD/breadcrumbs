@@ -5,4 +5,16 @@ BreadCrumbs.xcodeproj/project.xcworkspace/contents.xcworkspacedata
 
 BreadCrumbs.xcodeproj/project.xcworkspace/xcuserdata/jstraceski16.xcuserdatad/UserInterfaceState.xcuserstate
 
+<<<<<<< Updated upstream
 *.xccheckout
+=======
+BreadCrumbs.xcodeproj/project.xcworkspace/xcuserdata/jstraceski16.xcuserdatad/UserInterfaceState.xcuserstate
+
+BreadCrumbs.xcodeproj/project.xcworkspace/xcshareddata/BreadCrumbs.xccheckout
+
+BreadCrumbs.xcodeproj/project.xcworkspace/xcuserdata/jstraceski16.xcuserdatad/UserInterfaceState.xcuserstate
+
+*.xcuserstate
+>>>>>>> Stashed changes
+
+*.xcuserstate
