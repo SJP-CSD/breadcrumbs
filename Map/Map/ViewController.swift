@@ -34,15 +34,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
         
     }
-    
+    /*
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         outputLabel.text = "\(locValue.latitude) \(locValue.longitude)"
 
       mapView.setRegion(MKCoordinateRegionMake(locValue, MKCoordinateSpanMake(0, 0)), animated: true)
         //Find out what coordinate thing does
-    }
-    /*  XCODE 7 XCPODE 7 XKPDE 7 ZKDD 7
+    }*/
+    /*  XCODE 7 XCPODE 7 XKPDE 7 ZKDD 7*/
     
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
@@ -52,7 +52,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     mapView.setRegion(MKCoordinateRegionMake(locValue, MKCoordinateSpanMake(0, 0)), animated: true)
     //Find out what coordinate thing does
-    }*/
+    }
     
     func locationManager(manager: CLLocationManager,
         didFailWithError error: NSError)
