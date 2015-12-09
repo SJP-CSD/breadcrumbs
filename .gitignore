@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.xcworkspacedata
 
 BreadCrumbs.xcodeproj/project.xcworkspace/contents.xcworkspacedata
@@ -18,6 +19,10 @@ BreadCrumbs.xcodeproj/project.xcworkspace/xcuserdata/jstraceski16.xcuserdatad/Us
 *.xcuserstate
 >>>>>>> Stashed changes
 
+=======
+BreadCrumbs.xcodeproj/project.xcworkspace/xcuserdata/jstraceski16.xcuserdatad/UserInterfaceState.xcuserstate
+
+>>>>>>> StoryboardBranch
 =======
 BreadCrumbs.xcodeproj/project.xcworkspace/xcuserdata/jstraceski16.xcuserdatad/UserInterfaceState.xcuserstate
 
