@@ -16,6 +16,7 @@
 		5051FDEF1C0E123400CBDD76 /* MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5051FDEE1C0E123400CBDD76 /* MapTests.swift */; };
 		5051FDF91C0E13FD00CBDD76 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5051FDF81C0E13FD00CBDD76 /* CoreLocation.framework */; };
 		5051FDFB1C0E1B7100CBDD76 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5051FDFA1C0E1B7100CBDD76 /* MapKit.framework */; };
+		506D8B661C1886AA00D1C494 /* CustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 506D8B651C1886AA00D1C494 /* CustomObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		5051FDEE1C0E123400CBDD76 /* MapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTests.swift; sourceTree = "<group>"; };
 		5051FDF81C0E13FD00CBDD76 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5051FDFA1C0E1B7100CBDD76 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		506D8B641C1886AA00D1C494 /* Map-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Map-Bridging-Header.h"; sourceTree = "<group>"; };
+		506D8B651C1886AA00D1C494 /* CustomObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,11 +92,13 @@
 			children = (
 				5051FDD81C0E123400CBDD76 /* AppDelegate.swift */,
 				5051FDDA1C0E123400CBDD76 /* ViewController.swift */,
+				506D8B651C1886AA00D1C494 /* CustomObject.m */,
 				0436EE851C1530AC00B73F62 /* Annotation.swift */,
 				5051FDDC1C0E123400CBDD76 /* Main.storyboard */,
 				5051FDDF1C0E123400CBDD76 /* Images.xcassets */,
 				5051FDE11C0E123400CBDD76 /* LaunchScreen.xib */,
 				5051FDD61C0E123400CBDD76 /* Supporting Files */,
+				506D8B641C1886AA00D1C494 /* Map-Bridging-Header.h */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				5051FDDB1C0E123400CBDD76 /* ViewController.swift in Sources */,
 				0436EE861C1530AC00B73F62 /* Annotation.swift in Sources */,
 				5051FDD91C0E123400CBDD76 /* AppDelegate.swift in Sources */,
+				506D8B661C1886AA00D1C494 /* CustomObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,10 +360,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Map/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Map/Map-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -365,10 +374,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Map/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Map/Map-Bridging-Header.h";
 			};
 			name = Release;
 		};
