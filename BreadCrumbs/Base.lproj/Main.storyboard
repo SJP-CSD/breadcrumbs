@@ -345,7 +345,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIO-Bq-JdS">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIO-Bq-JdS">
                                 <rect key="frame" x="157" y="118" width="286" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take  a Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9T4-cM-jTa">
@@ -384,12 +384,15 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJI-Cp-99q">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJI-Cp-99q">
                                 <rect key="frame" x="157" y="377" width="294" height="128"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsq-7H-6MQ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsq-7H-6MQ">
                                         <rect key="frame" x="101" y="97" width="103" height="31"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="103" id="ZEH-D8-g0k"/>
+                                        </constraints>
                                         <state key="normal" title="End Navigation">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -399,6 +402,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="bsq-7H-6MQ" secondAttribute="bottom" id="1vu-bg-iDP"/>
+                                    <constraint firstItem="bsq-7H-6MQ" firstAttribute="leading" secondItem="KJI-Cp-99q" secondAttribute="leading" constant="101" id="3I4-0k-TY5"/>
+                                    <constraint firstAttribute="trailing" secondItem="bsq-7H-6MQ" secondAttribute="trailing" constant="90" id="PRR-ab-ObL"/>
+                                    <constraint firstItem="bsq-7H-6MQ" firstAttribute="top" secondItem="KJI-Cp-99q" secondAttribute="top" constant="97" id="ls6-oK-wkO"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryA-o2-X5g">
@@ -428,7 +434,9 @@
                             <constraint firstItem="KJI-Cp-99q" firstAttribute="top" secondItem="GIO-Bq-JdS" secondAttribute="bottom" constant="132" id="dwf-Sz-JBu"/>
                             <constraint firstItem="KJI-Cp-99q" firstAttribute="leading" secondItem="8mt-IX-wkp" secondAttribute="leadingMargin" constant="137" id="hMB-dr-wLK"/>
                             <constraint firstItem="KJI-Cp-99q" firstAttribute="top" secondItem="ayg-lc-Fej" secondAttribute="bottom" constant="313" id="lSm-Pz-XyN"/>
+                            <constraint firstAttribute="bottom" secondItem="GIO-Bq-JdS" secondAttribute="bottom" constant="354" id="mHj-xY-glr"/>
                             <constraint firstItem="GIO-Bq-JdS" firstAttribute="top" secondItem="ayg-lc-Fej" secondAttribute="bottom" constant="54" id="niD-Vp-seY"/>
+                            <constraint firstItem="GIO-Bq-JdS" firstAttribute="top" secondItem="ayg-lc-Fej" secondAttribute="bottom" constant="98" id="oLf-eh-p1X"/>
                             <constraint firstItem="GIO-Bq-JdS" firstAttribute="top" secondItem="ayg-lc-Fej" secondAttribute="bottom" constant="53" id="tZU-Mj-0Gn"/>
                             <constraint firstItem="GIO-Bq-JdS" firstAttribute="leading" secondItem="KJI-Cp-99q" secondAttribute="leading" id="wAv-Af-mDD"/>
                         </constraints>
