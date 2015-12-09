@@ -368,12 +368,16 @@
                         <subviews>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIO-Bq-JdS">
 =======
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIO-Bq-JdS">
 >>>>>>> StoryboardBranch
 =======
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIO-Bq-JdS">
+>>>>>>> StoryboardBranch
+=======
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIO-Bq-JdS">
 >>>>>>> StoryboardBranch
                                 <rect key="frame" x="157" y="118" width="286" height="128"/>
                                 <subviews>
@@ -415,6 +419,7 @@
                             </view>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJI-Cp-99q">
                                 <rect key="frame" x="157" y="377" width="294" height="128"/>
                                 <subviews>
@@ -442,8 +447,17 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsq-7H-6MQ">
 >>>>>>> StoryboardBranch
+=======
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJI-Cp-99q">
+                                <rect key="frame" x="157" y="377" width="294" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsq-7H-6MQ">
+>>>>>>> StoryboardBranch
                                         <rect key="frame" x="101" y="97" width="103" height="31"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="103" id="ZEH-D8-g0k"/>
+                                        </constraints>
                                         <state key="normal" title="End Navigation">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -454,6 +468,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="bsq-7H-6MQ" secondAttribute="bottom" id="1vu-bg-iDP"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     <constraint firstItem="bsq-7H-6MQ" firstAttribute="centerX" secondItem="ryA-o2-X5g" secondAttribute="centerX" id="AIB-c1-8By"/>
                                     <constraint firstItem="ryA-o2-X5g" firstAttribute="top" secondItem="KJI-Cp-99q" secondAttribute="top" constant="59" id="egl-Dj-jA3"/>
                                     <constraint firstItem="ryA-o2-X5g" firstAttribute="leading" secondItem="KJI-Cp-99q" secondAttribute="leading" constant="97" id="ek2-DE-OI1"/>
@@ -461,6 +476,11 @@
                                 </constraints>
                             </view>
 =======
+=======
+                                    <constraint firstItem="bsq-7H-6MQ" firstAttribute="leading" secondItem="KJI-Cp-99q" secondAttribute="leading" constant="101" id="3I4-0k-TY5"/>
+                                    <constraint firstAttribute="trailing" secondItem="bsq-7H-6MQ" secondAttribute="trailing" constant="90" id="PRR-ab-ObL"/>
+                                    <constraint firstItem="bsq-7H-6MQ" firstAttribute="top" secondItem="KJI-Cp-99q" secondAttribute="top" constant="97" id="ls6-oK-wkO"/>
+>>>>>>> StoryboardBranch
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryA-o2-X5g">
@@ -491,7 +511,9 @@
                             <constraint firstItem="KJI-Cp-99q" firstAttribute="top" secondItem="GIO-Bq-JdS" secondAttribute="bottom" constant="132" id="dwf-Sz-JBu"/>
                             <constraint firstItem="KJI-Cp-99q" firstAttribute="leading" secondItem="8mt-IX-wkp" secondAttribute="leadingMargin" constant="137" id="hMB-dr-wLK"/>
                             <constraint firstItem="KJI-Cp-99q" firstAttribute="top" secondItem="ayg-lc-Fej" secondAttribute="bottom" constant="313" id="lSm-Pz-XyN"/>
+                            <constraint firstAttribute="bottom" secondItem="GIO-Bq-JdS" secondAttribute="bottom" constant="354" id="mHj-xY-glr"/>
                             <constraint firstItem="GIO-Bq-JdS" firstAttribute="top" secondItem="ayg-lc-Fej" secondAttribute="bottom" constant="54" id="niD-Vp-seY"/>
+                            <constraint firstItem="GIO-Bq-JdS" firstAttribute="top" secondItem="ayg-lc-Fej" secondAttribute="bottom" constant="98" id="oLf-eh-p1X"/>
                             <constraint firstItem="GIO-Bq-JdS" firstAttribute="top" secondItem="ayg-lc-Fej" secondAttribute="bottom" constant="53" id="tZU-Mj-0Gn"/>
                             <constraint firstItem="GIO-Bq-JdS" firstAttribute="leading" secondItem="KJI-Cp-99q" secondAttribute="leading" id="wAv-Af-mDD"/>
                         </constraints>
