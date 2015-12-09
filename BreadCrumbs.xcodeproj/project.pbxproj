@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C80B9971C15D71D00AF90BA /* photo_camera_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C80B9931C15D71D00AF90BA /* photo_camera_1.png */; };
+		6C80B9981C15D71D00AF90BA /* photo_camera_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C80B9941C15D71D00AF90BA /* photo_camera_2.png */; };
+		6C80B9991C15D71D00AF90BA /* Photo_Photograph_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C80B9951C15D71D00AF90BA /* Photo_Photograph_1.png */; };
+		6C80B99A1C15D71D00AF90BA /* Photo_Photograph_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C80B9961C15D71D00AF90BA /* Photo_Photograph_2.png */; };
+		F06CD39D1C1612DE007FEC23 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06CD39C1C1612DE007FEC23 /* MapKit.framework */; };
+		F06CD39F1C1612E5007FEC23 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06CD39E1C1612E5007FEC23 /* CoreLocation.framework */; };
 		F0AAD57C1C0E14A400F242F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AAD57B1C0E14A400F242F9 /* AppDelegate.swift */; };
 		F0AAD57E1C0E14A400F242F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AAD57D1C0E14A400F242F9 /* ViewController.swift */; };
 		F0AAD5811C0E14A400F242F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0AAD57F1C0E14A400F242F9 /* Main.storyboard */; };
 		F0AAD5831C0E14A400F242F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0AAD5821C0E14A400F242F9 /* Images.xcassets */; };
 		F0AAD5861C0E14A400F242F9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AAD5841C0E14A400F242F9 /* LaunchScreen.xib */; };
 		F0AAD5921C0E14A500F242F9 /* BreadCrumbsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AAD5911C0E14A500F242F9 /* BreadCrumbsTests.swift */; };
+		F0AAD59C1C0E19C700F242F9 /* 4253ce56e78d9a49ee8ef2d7cb2d295e_400x400.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AAD59B1C0E19C700F242F9 /* 4253ce56e78d9a49ee8ef2d7cb2d295e_400x400.png */; };
+		F0AAD59E1C0E19F900F242F9 /* 9296984.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AAD59D1C0E19F900F242F9 /* 9296984.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C80B9931C15D71D00AF90BA /* photo_camera_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_camera_1.png; sourceTree = "<group>"; };
+		6C80B9941C15D71D00AF90BA /* photo_camera_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_camera_2.png; sourceTree = "<group>"; };
+		6C80B9951C15D71D00AF90BA /* Photo_Photograph_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photo_Photograph_1.png; sourceTree = "<group>"; };
+		6C80B9961C15D71D00AF90BA /* Photo_Photograph_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photo_Photograph_2.png; sourceTree = "<group>"; };
+		F06CD39C1C1612DE007FEC23 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F06CD39E1C1612E5007FEC23 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F0AAD5761C0E14A400F242F9 /* BreadCrumbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreadCrumbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AAD57A1C0E14A400F242F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0AAD57B1C0E14A400F242F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +50,8 @@
 		F0AAD58B1C0E14A500F242F9 /* BreadCrumbsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreadCrumbsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AAD5901C0E14A500F242F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0AAD5911C0E14A500F242F9 /* BreadCrumbsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadCrumbsTests.swift; sourceTree = "<group>"; };
+		F0AAD59B1C0E19C700F242F9 /* 4253ce56e78d9a49ee8ef2d7cb2d295e_400x400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4253ce56e78d9a49ee8ef2d7cb2d295e_400x400.png; sourceTree = "<group>"; };
+		F0AAD59D1C0E19F900F242F9 /* 9296984.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9296984.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06CD39F1C1612E5007FEC23 /* CoreLocation.framework in Frameworks */,
+				F06CD39D1C1612DE007FEC23 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +77,8 @@
 		F0AAD56D1C0E14A400F242F9 = {
 			isa = PBXGroup;
 			children = (
+				F06CD39E1C1612E5007FEC23 /* CoreLocation.framework */,
+				F06CD39C1C1612DE007FEC23 /* MapKit.framework */,
 				F0AAD5781C0E14A400F242F9 /* BreadCrumbs */,
 				F0AAD58E1C0E14A500F242F9 /* BreadCrumbsTests */,
 				F0AAD5771C0E14A400F242F9 /* Products */,
@@ -77,11 +97,13 @@
 		F0AAD5781C0E14A400F242F9 /* BreadCrumbs */ = {
 			isa = PBXGroup;
 			children = (
-				F0AAD57B1C0E14A400F242F9 /* AppDelegate.swift */,
 				F0AAD57D1C0E14A400F242F9 /* ViewController.swift */,
 				F0AAD57F1C0E14A400F242F9 /* Main.storyboard */,
+				6C80B9931C15D71D00AF90BA /* photo_camera_1.png */,
+				6C80B9941C15D71D00AF90BA /* photo_camera_2.png */,
+				6C80B9951C15D71D00AF90BA /* Photo_Photograph_1.png */,
+				6C80B9961C15D71D00AF90BA /* Photo_Photograph_2.png */,
 				F0AAD5821C0E14A400F242F9 /* Images.xcassets */,
-				F0AAD5841C0E14A400F242F9 /* LaunchScreen.xib */,
 				F0AAD5791C0E14A400F242F9 /* Supporting Files */,
 			);
 			path = BreadCrumbs;
@@ -90,6 +112,10 @@
 		F0AAD5791C0E14A400F242F9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F0AAD57B1C0E14A400F242F9 /* AppDelegate.swift */,
+				F0AAD59D1C0E19F900F242F9 /* 9296984.png */,
+				F0AAD5841C0E14A400F242F9 /* LaunchScreen.xib */,
+				F0AAD59B1C0E19C700F242F9 /* 4253ce56e78d9a49ee8ef2d7cb2d295e_400x400.png */,
 				F0AAD57A1C0E14A400F242F9 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -156,6 +182,7 @@
 		F0AAD56E1C0E14A400F242F9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Joseph Straceski";
 				TargetAttributes = {
@@ -192,8 +219,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0AAD59C1C0E19C700F242F9 /* 4253ce56e78d9a49ee8ef2d7cb2d295e_400x400.png in Resources */,
 				F0AAD5811C0E14A400F242F9 /* Main.storyboard in Resources */,
+				F0AAD59E1C0E19F900F242F9 /* 9296984.png in Resources */,
 				F0AAD5861C0E14A400F242F9 /* LaunchScreen.xib in Resources */,
+				6C80B9981C15D71D00AF90BA /* photo_camera_2.png in Resources */,
+				6C80B99A1C15D71D00AF90BA /* Photo_Photograph_2.png in Resources */,
+				6C80B9971C15D71D00AF90BA /* photo_camera_1.png in Resources */,
+				6C80B9991C15D71D00AF90BA /* Photo_Photograph_1.png in Resources */,
 				F0AAD5831C0E14A400F242F9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +444,7 @@
 				F0AAD5971C0E14A500F242F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0AAD5981C0E14A500F242F9 /* Build configuration list for PBXNativeTarget "BreadCrumbsTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +453,7 @@
 				F0AAD59A1C0E14A500F242F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
