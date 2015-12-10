@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50F5B8EA1C19F55600E23153 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F5B8E91C19F55600E23153 /* Annotation.swift */; };
+		50F5B8ED1C19F74100E23153 /* CustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F5B8EC1C19F74100E23153 /* CustomObject.m */; };
+		50F5B8F41C19F82600E23153 /* CrumbPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F5B8F11C19F82600E23153 /* CrumbPath.m */; };
+		50F5B8F51C19F82600E23153 /* CrumbPathRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F5B8F31C19F82600E23153 /* CrumbPathRenderer.m */; };
 		6C80B9971C15D71D00AF90BA /* photo_camera_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C80B9931C15D71D00AF90BA /* photo_camera_1.png */; };
 		6C80B9981C15D71D00AF90BA /* photo_camera_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C80B9941C15D71D00AF90BA /* photo_camera_2.png */; };
 		6C80B9991C15D71D00AF90BA /* Photo_Photograph_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C80B9951C15D71D00AF90BA /* Photo_Photograph_1.png */; };
@@ -34,6 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50F5B8E91C19F55600E23153 /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		50F5B8EB1C19F74000E23153 /* BreadCrumbs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BreadCrumbs-Bridging-Header.h"; sourceTree = "<group>"; };
+		50F5B8EC1C19F74100E23153 /* CustomObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomObject.m; sourceTree = "<group>"; };
+		50F5B8F01C19F82600E23153 /* CrumbPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrumbPath.h; path = ../../../Downloads/Breadcrumb/Breadcrumb/CrumbPath.h; sourceTree = "<group>"; };
+		50F5B8F11C19F82600E23153 /* CrumbPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrumbPath.m; path = ../../../Downloads/Breadcrumb/Breadcrumb/CrumbPath.m; sourceTree = "<group>"; };
+		50F5B8F21C19F82600E23153 /* CrumbPathRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrumbPathRenderer.h; path = ../../../Downloads/Breadcrumb/Breadcrumb/CrumbPathRenderer.h; sourceTree = "<group>"; };
+		50F5B8F31C19F82600E23153 /* CrumbPathRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrumbPathRenderer.m; path = ../../../Downloads/Breadcrumb/Breadcrumb/CrumbPathRenderer.m; sourceTree = "<group>"; };
 		6C80B9931C15D71D00AF90BA /* photo_camera_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_camera_1.png; sourceTree = "<group>"; };
 		6C80B9941C15D71D00AF90BA /* photo_camera_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_camera_2.png; sourceTree = "<group>"; };
 		6C80B9951C15D71D00AF90BA /* Photo_Photograph_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photo_Photograph_1.png; sourceTree = "<group>"; };
@@ -97,7 +108,13 @@
 		F0AAD5781C0E14A400F242F9 /* BreadCrumbs */ = {
 			isa = PBXGroup;
 			children = (
+				50F5B8F31C19F82600E23153 /* CrumbPathRenderer.m */,
+				50F5B8F21C19F82600E23153 /* CrumbPathRenderer.h */,
+				50F5B8F11C19F82600E23153 /* CrumbPath.m */,
+				50F5B8F01C19F82600E23153 /* CrumbPath.h */,
 				F0AAD57D1C0E14A400F242F9 /* MapViewController.swift */,
+				50F5B8EC1C19F74100E23153 /* CustomObject.m */,
+				50F5B8E91C19F55600E23153 /* Annotation.swift */,
 				F0AAD57F1C0E14A400F242F9 /* Main.storyboard */,
 				6C80B9931C15D71D00AF90BA /* photo_camera_1.png */,
 				6C80B9941C15D71D00AF90BA /* photo_camera_2.png */,
@@ -105,6 +122,7 @@
 				6C80B9961C15D71D00AF90BA /* Photo_Photograph_2.png */,
 				F0AAD5821C0E14A400F242F9 /* Images.xcassets */,
 				F0AAD5791C0E14A400F242F9 /* Supporting Files */,
+				50F5B8EB1C19F74000E23153 /* BreadCrumbs-Bridging-Header.h */,
 			);
 			path = BreadCrumbs;
 			sourceTree = "<group>";
@@ -246,7 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0AAD57E1C0E14A400F242F9 /* MapViewController.swift in Sources */,
+				50F5B8F51C19F82600E23153 /* CrumbPathRenderer.m in Sources */,
+				50F5B8EA1C19F55600E23153 /* Annotation.swift in Sources */,
+				50F5B8F41C19F82600E23153 /* CrumbPath.m in Sources */,
 				F0AAD57C1C0E14A400F242F9 /* AppDelegate.swift in Sources */,
+				50F5B8ED1C19F74100E23153 /* CustomObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,9 +397,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BreadCrumbs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BreadCrumbs/BreadCrumbs-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -385,9 +410,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BreadCrumbs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BreadCrumbs/BreadCrumbs-Bridging-Header.h";
 			};
 			name = Release;
 		};
