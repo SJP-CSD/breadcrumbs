@@ -222,10 +222,10 @@
             </objects>
             <point key="canvasLocation" x="515" y="-332"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="ura-Wl-oci">
             <objects>
-                <viewController id="LLe-Jh-ADe" sceneMemberID="viewController">
+                <viewController id="LLe-Jh-ADe" customClass="MapViewController" customModule="BreadCrumbs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4zv-T1-rDC"/>
                         <viewControllerLayoutGuide type="bottom" id="ZOu-I3-wun"/>
@@ -328,6 +328,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="rIh-sc-ld4" id="Kn6-KL-Bs6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFh-r3-FuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
