@@ -15,38 +15,65 @@ class CoreDataTest: UIViewController {
     
     @IBOutlet weak var text: UITextField!
     @IBOutlet weak var label: UILabel!
+   
+    
     
     @IBAction func saveData(sender: UIButton) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
+        if let managedContext = appDelegate.managedObjectContext
+        {
+            //2
+            println("managedContext")
+            let entity =  NSEntityDescription.entityForName("Location",
+                inManagedObjectContext: managedContext)
+            
+            let person = NSManagedObject(entity: entity!,
+                insertIntoManagedObjectContext: managedContext)
+            
+            //3
+            person.setValue(text.text, forKey: "name")
+            
+            //4
+            let error = NSErrorPointer()
+            managedContext.save(error)
+        }
+    }
+    @IBAction func clearData(sender: UIButton) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        if let managedContext = appDelegate.managedObjectContext
+        {
+            let fetchRequest = NSFetchRequest(entityName: "Location")
+            let error = NSErrorPointer()
+            let data = managedContext.executeFetchRequest(fetchRequest, error: error)
+            let results = data as! [NSManagedObject]
+            for result in results {
+                managedContext.deleteObject(result)
+            }
+        }
     }
     @IBAction func loadData(sender: UIButton) {
+        //1
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        if let managedContext = appDelegate.managedObjectContext {
+            
+            //2
+            let fetchRequest = NSFetchRequest(entityName: "Location")
+            
+            //3
+            let error = NSErrorPointer()
+            let results = managedContext.executeFetchRequest(fetchRequest, error: error)
+            let people = results as! [NSManagedObject]
+            if let name: AnyObject = people.last?.valueForKey("name") {
+                label.text = "\(name)"
+            }
+        }
         
     }
     
     func saveName(name: String) {
-        //1
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        let managedContext = appDelegate.managedObjectContext
-        
-        //2
-        let entity =  NSEntityDescription.entityForName("Location",
-            inManagedObjectContext:managedContext)
-        
-        let person = NSManagedObject(entity: entity!,
-            insertIntoManagedObjectContext: managedContext)
-        
-        //3
-        person.setValue(name, forKey: "name")
-        
-        //4
-        do {
-        try managedContext.save()
-        //5
-        people.append(person)
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-        }
+    
     }
     
     override func viewDidLoad() {

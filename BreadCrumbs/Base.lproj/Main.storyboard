@@ -149,19 +149,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78y-g4-RZD">
-                                <rect key="frame" x="283" y="72" width="34" height="30"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveData:" destination="ByQ-eT-w3w" eventType="touchUpInside" id="aSu-g0-D2r"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dh-Ik-TUb">
                                 <rect key="frame" x="279" y="186" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tg8-rr-bjt">
@@ -178,19 +169,38 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78y-g4-RZD">
+                                <rect key="frame" x="283" y="72" width="34" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveData:" destination="ByQ-eT-w3w" eventType="touchUpInside" id="aSu-g0-D2r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="489-gV-aDK">
+                                <rect key="frame" x="281" y="215" width="37" height="30"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearData:" destination="ByQ-eT-w3w" eventType="touchUpInside" id="bg2-a3-gRy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ezi-aR-iWA" firstAttribute="leading" secondItem="mgm-Bf-yxl" secondAttribute="leadingMargin" id="0fd-Hp-3Ie"/>
-                            <constraint firstItem="0Dh-Ik-TUb" firstAttribute="top" secondItem="tg8-rr-bjt" secondAttribute="bottom" constant="8" id="BCY-2O-2qP"/>
-                            <constraint firstAttribute="centerX" secondItem="ezi-aR-iWA" secondAttribute="centerX" constant="-0.5" id="DAU-Oh-ILc"/>
-                            <constraint firstAttribute="centerX" secondItem="tg8-rr-bjt" secondAttribute="centerX" id="KBa-q3-kMj"/>
-                            <constraint firstItem="tg8-rr-bjt" firstAttribute="top" secondItem="ezi-aR-iWA" secondAttribute="bottom" constant="8" id="Oad-d0-C88"/>
-                            <constraint firstItem="78y-g4-RZD" firstAttribute="top" secondItem="oec-2x-oRK" secondAttribute="bottom" constant="8" id="ThZ-xY-sI8"/>
-                            <constraint firstAttribute="centerX" secondItem="78y-g4-RZD" secondAttribute="centerX" id="VdB-OE-tge"/>
-                            <constraint firstItem="ezi-aR-iWA" firstAttribute="trailing" secondItem="mgm-Bf-yxl" secondAttribute="trailingMargin" id="ad4-Au-0iC"/>
-                            <constraint firstAttribute="centerX" secondItem="0Dh-Ik-TUb" secondAttribute="centerX" id="yLV-od-Gjj"/>
-                            <constraint firstItem="ezi-aR-iWA" firstAttribute="top" secondItem="78y-g4-RZD" secondAttribute="bottom" constant="8" id="zoF-lL-TQN"/>
+                            <constraint firstAttribute="centerX" secondItem="78y-g4-RZD" secondAttribute="centerX" id="5zP-ne-VHj"/>
+                            <constraint firstItem="tg8-rr-bjt" firstAttribute="top" secondItem="ezi-aR-iWA" secondAttribute="bottom" constant="8" id="9cj-C4-Jys"/>
+                            <constraint firstAttribute="centerX" secondItem="489-gV-aDK" secondAttribute="centerX" id="R8K-FR-1mr"/>
+                            <constraint firstItem="ezi-aR-iWA" firstAttribute="top" secondItem="78y-g4-RZD" secondAttribute="bottom" constant="8" id="Rhh-YS-gcY"/>
+                            <constraint firstItem="78y-g4-RZD" firstAttribute="top" secondItem="oec-2x-oRK" secondAttribute="bottom" constant="8" id="Tdt-2c-mt2"/>
+                            <constraint firstItem="0Dh-Ik-TUb" firstAttribute="top" secondItem="tg8-rr-bjt" secondAttribute="bottom" constant="8" id="fqB-tQ-Sp8"/>
+                            <constraint firstItem="489-gV-aDK" firstAttribute="top" secondItem="0Dh-Ik-TUb" secondAttribute="bottom" constant="8" id="ioM-NN-qfD"/>
+                            <constraint firstAttribute="centerX" secondItem="0Dh-Ik-TUb" secondAttribute="centerX" id="pD1-6Q-5oc"/>
+                            <constraint firstAttribute="centerX" secondItem="tg8-rr-bjt" secondAttribute="centerX" constant="-0.5" id="qST-HA-wlE"/>
+                            <constraint firstItem="ezi-aR-iWA" firstAttribute="leading" secondItem="mgm-Bf-yxl" secondAttribute="leadingMargin" id="tmH-p3-rlx"/>
+                            <constraint firstItem="ezi-aR-iWA" firstAttribute="trailing" secondItem="mgm-Bf-yxl" secondAttribute="trailingMargin" id="xce-Em-Zk6"/>
                         </constraints>
                     </view>
                     <connections>
