@@ -13,6 +13,7 @@
 		6C80B99A1C15D71D00AF90BA /* Photo_Photograph_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C80B9961C15D71D00AF90BA /* Photo_Photograph_2.png */; };
 		F0445C6D1C19F6B3002A5D62 /* CoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0445C6C1C19F6B3002A5D62 /* CoreDataTest.swift */; };
 		F0445C701C19F8DF002A5D62 /* LocationData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0445C6E1C19F8DF002A5D62 /* LocationData.xcdatamodeld */; };
+		F0651D061C2075320056FC05 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0651D051C2075320056FC05 /* ImageViewController.swift */; };
 		F06CD39D1C1612DE007FEC23 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06CD39C1C1612DE007FEC23 /* MapKit.framework */; };
 		F06CD39F1C1612E5007FEC23 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06CD39E1C1612E5007FEC23 /* CoreLocation.framework */; };
 		F08A0BBA1C1EF9E300C76AAE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08A0BB91C1EF9E300C76AAE /* CoreData.framework */; };
@@ -43,6 +44,7 @@
 		6C80B9961C15D71D00AF90BA /* Photo_Photograph_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photo_Photograph_2.png; sourceTree = "<group>"; };
 		F0445C6C1C19F6B3002A5D62 /* CoreDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTest.swift; sourceTree = "<group>"; };
 		F0445C6F1C19F8DF002A5D62 /* LocationData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocationData.xcdatamodel; sourceTree = "<group>"; };
+		F0651D051C2075320056FC05 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		F06CD39C1C1612DE007FEC23 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F06CD39E1C1612E5007FEC23 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F08A0BB91C1EF9E300C76AAE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -108,12 +110,14 @@
 				F0AAD57F1C0E14A400F242F9 /* Main.storyboard */,
 				6C80B9931C15D71D00AF90BA /* photo_camera_1.png */,
 				6C80B9941C15D71D00AF90BA /* photo_camera_2.png */,
+				F0AAD59D1C0E19F900F242F9 /* 9296984.png */,
 				6C80B9951C15D71D00AF90BA /* Photo_Photograph_1.png */,
 				6C80B9961C15D71D00AF90BA /* Photo_Photograph_2.png */,
 				F0AAD5821C0E14A400F242F9 /* Images.xcassets */,
 				F0AAD5791C0E14A400F242F9 /* Supporting Files */,
 				F0445C6C1C19F6B3002A5D62 /* CoreDataTest.swift */,
 				F0445C6E1C19F8DF002A5D62 /* LocationData.xcdatamodeld */,
+				F0651D051C2075320056FC05 /* ImageViewController.swift */,
 			);
 			path = BreadCrumbs;
 			sourceTree = "<group>";
@@ -123,7 +127,6 @@
 			children = (
 				F0AAD58E1C0E14A500F242F9 /* BreadCrumbsTests */,
 				F0AAD57B1C0E14A400F242F9 /* AppDelegate.swift */,
-				F0AAD59D1C0E19F900F242F9 /* 9296984.png */,
 				F0AAD5841C0E14A400F242F9 /* LaunchScreen.xib */,
 				F0AAD59B1C0E19C700F242F9 /* 4253ce56e78d9a49ee8ef2d7cb2d295e_400x400.png */,
 				F0AAD57A1C0E14A400F242F9 /* Info.plist */,
@@ -262,6 +265,7 @@
 			files = (
 				F0445C701C19F8DF002A5D62 /* LocationData.xcdatamodeld in Sources */,
 				F0445C6D1C19F6B3002A5D62 /* CoreDataTest.swift in Sources */,
+				F0651D061C2075320056FC05 /* ImageViewController.swift in Sources */,
 				F0AAD57E1C0E14A400F242F9 /* ViewController.swift in Sources */,
 				F0AAD57C1C0E14A400F242F9 /* AppDelegate.swift in Sources */,
 			);

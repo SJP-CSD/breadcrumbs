@@ -10,37 +10,41 @@ import Foundation
 import UIKit
 import CoreData
 
-class CoreDataTest: UIViewController {
+func getDocumentsURL() -> NSURL {
+    let documentsURL: AnyObject = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+    return documentsURL as! NSURL
+}
+
+func fileInDocumentsDirectory(filename: String) -> String {
+    
+    let fileURL = getDocumentsURL().URLByAppendingPathComponent(filename)
+    return fileURL.path!
+    
+}
+
+class CoreDataTest: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     
     @IBOutlet weak var text: UITextField!
     @IBOutlet weak var label: UILabel!
-   
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
+    @IBOutlet weak var imageDisplay: UIImageView!
     
     @IBAction func saveData(sender: UIButton) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
         if let managedContext = appDelegate.managedObjectContext
         {
-            //2
             println("managedContext")
             let entity =  NSEntityDescription.entityForName("Location",
                 inManagedObjectContext: managedContext)
-            
             let person = NSManagedObject(entity: entity!,
                 insertIntoManagedObjectContext: managedContext)
-            
-            //3
             person.setValue(text.text, forKey: "name")
-            
-            //4
             let error = NSErrorPointer()
             managedContext.save(error)
         }
     }
     @IBAction func clearData(sender: UIButton) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         if let managedContext = appDelegate.managedObjectContext
         {
@@ -54,14 +58,8 @@ class CoreDataTest: UIViewController {
         }
     }
     @IBAction func loadData(sender: UIButton) {
-        //1
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         if let managedContext = appDelegate.managedObjectContext {
-            
-            //2
             let fetchRequest = NSFetchRequest(entityName: "Location")
-            
-            //3
             let error = NSErrorPointer()
             let results = managedContext.executeFetchRequest(fetchRequest, error: error)
             let people = results as! [NSManagedObject]
@@ -70,6 +68,42 @@ class CoreDataTest: UIViewController {
             }
         }
         
+    }
+
+    func saveImage (image: UIImage, path: String ) -> Bool {
+        let pngImageData = UIImagePNGRepresentation(image)
+        let result = pngImageData!.writeToFile(path, atomically: true)
+        return result
+    }
+    
+    func loadImageFromPath(path: String) -> UIImage? {
+        let image = UIImage(contentsOfFile: path)
+        if image == nil {
+            println("missing image at: \(path)")
+        }
+        println("Loading image from path: \(path)")
+        return image
+        
+    }
+    
+    @IBAction func LoadImageButton(sender: UIButton) {
+        let imagePath = fileInDocumentsDirectory("9296984.png")
+        let image = loadImageFromPath(imagePath)
+        imageDisplay.image = UIImage(named: "9296984")
+    }
+    
+    var imagePicker: UIImagePickerController!
+    @IBAction func takePhoto(sender: UIButton) {
+        imagePicker =  UIImagePickerController()
+        imagePicker.delegate = self
+        //imagePicker.sourceType = .Camera
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        imageDisplay.image = info[UIImagePickerControllerOriginalImage] as? UIImage
     }
     
     func saveName(name: String) {

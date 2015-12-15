@@ -187,23 +187,55 @@
                                     <action selector="clearData:" destination="ByQ-eT-w3w" eventType="touchUpInside" id="bg2-a3-gRy"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4ph-EJ-Upf">
+                                <rect key="frame" x="179" y="253" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="EDJ-oe-EEa"/>
+                                    <constraint firstAttribute="width" constant="240" id="zbo-fU-wZG"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WK8-vY-Zy6">
+                                <rect key="frame" x="259" y="501" width="81" height="30"/>
+                                <state key="normal" title="Load Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="LoadImageButton:" destination="ByQ-eT-w3w" eventType="touchUpInside" id="Px0-lJ-UTH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdB-au-1HI">
+                                <rect key="frame" x="259" y="539" width="81" height="30"/>
+                                <state key="normal" title="Save Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="ByQ-eT-w3w" eventType="touchUpInside" id="OwX-lC-qB1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="78y-g4-RZD" secondAttribute="centerX" id="5zP-ne-VHj"/>
+                            <constraint firstAttribute="centerX" secondItem="wdB-au-1HI" secondAttribute="centerX" constant="0.5" id="7es-UQ-aPn"/>
                             <constraint firstItem="tg8-rr-bjt" firstAttribute="top" secondItem="ezi-aR-iWA" secondAttribute="bottom" constant="8" id="9cj-C4-Jys"/>
+                            <constraint firstItem="wdB-au-1HI" firstAttribute="top" secondItem="WK8-vY-Zy6" secondAttribute="bottom" constant="8" id="B4X-XY-xGY"/>
+                            <constraint firstAttribute="centerX" secondItem="4ph-EJ-Upf" secondAttribute="centerX" constant="1" id="H7k-BI-RMv"/>
                             <constraint firstAttribute="centerX" secondItem="489-gV-aDK" secondAttribute="centerX" id="R8K-FR-1mr"/>
                             <constraint firstItem="ezi-aR-iWA" firstAttribute="top" secondItem="78y-g4-RZD" secondAttribute="bottom" constant="8" id="Rhh-YS-gcY"/>
+                            <constraint firstAttribute="centerX" secondItem="WK8-vY-Zy6" secondAttribute="centerX" constant="0.5" id="TEr-Dc-aNw"/>
                             <constraint firstItem="78y-g4-RZD" firstAttribute="top" secondItem="oec-2x-oRK" secondAttribute="bottom" constant="8" id="Tdt-2c-mt2"/>
                             <constraint firstItem="0Dh-Ik-TUb" firstAttribute="top" secondItem="tg8-rr-bjt" secondAttribute="bottom" constant="8" id="fqB-tQ-Sp8"/>
                             <constraint firstItem="489-gV-aDK" firstAttribute="top" secondItem="0Dh-Ik-TUb" secondAttribute="bottom" constant="8" id="ioM-NN-qfD"/>
+                            <constraint firstItem="WK8-vY-Zy6" firstAttribute="top" secondItem="4ph-EJ-Upf" secondAttribute="bottom" constant="8" id="lJi-Au-dgj"/>
                             <constraint firstAttribute="centerX" secondItem="0Dh-Ik-TUb" secondAttribute="centerX" id="pD1-6Q-5oc"/>
                             <constraint firstAttribute="centerX" secondItem="tg8-rr-bjt" secondAttribute="centerX" constant="-0.5" id="qST-HA-wlE"/>
+                            <constraint firstItem="4ph-EJ-Upf" firstAttribute="top" secondItem="489-gV-aDK" secondAttribute="bottom" constant="8" id="r17-na-N7r"/>
                             <constraint firstItem="ezi-aR-iWA" firstAttribute="leading" secondItem="mgm-Bf-yxl" secondAttribute="leadingMargin" id="tmH-p3-rlx"/>
                             <constraint firstItem="ezi-aR-iWA" firstAttribute="trailing" secondItem="mgm-Bf-yxl" secondAttribute="trailingMargin" id="xce-Em-Zk6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageDisplay" destination="4ph-EJ-Upf" id="U9U-9M-LZe"/>
                         <outlet property="label" destination="0Dh-Ik-TUb" id="xJ1-eL-KIL"/>
                         <outlet property="text" destination="ezi-aR-iWA" id="de3-IP-ocX"/>
                     </connections>
