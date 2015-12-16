@@ -13,10 +13,12 @@ import MapKit
     
     var name:String
     var thecoordinate:CLLocationCoordinate2D
+    var isPin:Bool
     
-    init(name:String,coordinate:CLLocationCoordinate2D) {
+    init(name:String,coordinate:CLLocationCoordinate2D,type:Bool) {
         self.name = name
         self.thecoordinate = coordinate
+        self.isPin = type
     }
     
     @objc var coordinate: CLLocationCoordinate2D {

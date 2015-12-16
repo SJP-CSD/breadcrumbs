@@ -33,7 +33,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         else {
             print("Location Services Disabled")
         }
-        
     }
     
     @IBAction func dropPin(sender: AnyObject) {
@@ -50,7 +49,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         drawPath = !drawPath
     }
 
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    /* func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         
         if didPressButton {
@@ -69,22 +68,48 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         
     }
-    /*  XCODE 7 XCPODE 7 XKPDE 7 ZKDD 7
+    */
+    //  XCODE 7 XCPODE 7 XKPDE 7 ZKDD 7
     
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
-    let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-    outputLabel.text = "\(locValue.latitude) \(locValue.longitude)"
-    
-    mapView.setRegion(MKCoordinateRegionMake(locValue, MKCoordinateSpanMake(0, 0)), animated: true)
-    //Find out what coordinate thing does
-    }*/
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        
+        if didPressButton {
+            let anno: Annotation = Annotation(name: "Matt", coordinate: locValue, type: true)
+            mapView.addAnnotation(anno)
+            didPressButton = false
+        }
+        if didInit == false
+        {
+            mapView.setRegion(MKCoordinateRegionMake(locValue, MKCoordinateSpanMake(0.01, 0.01)), animated: true)
+            didInit = true
+        }
+        else if follow {
+            var span = mapView.region.span
+            mapView.setRegion(MKCoordinateRegionMake(locValue, span), animated: true)
+        }
+        if drawPath {
+            let pathMarker: Annotation = Annotation(name: "", coordinate: locValue, type: false)
+            mapView.addAnnotation(pathMarker)
+        }
+    }
     
     func locationManager(manager: CLLocationManager,
         didFailWithError error: NSError)
     {
         
+    }
+    
+
+}
+
+extension MapViewController {
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = AnnotationView(annotation: annotation, reuseIdentifier: "Map")
+        annotationView.canShowCallout = true
+        return annotationView
     }
 }
 
