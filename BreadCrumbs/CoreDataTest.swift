@@ -28,44 +28,52 @@ class CoreDataTest: UIViewController, UINavigationControllerDelegate, UIImagePic
     @IBOutlet weak var text: UITextField!
     @IBOutlet weak var label: UILabel!
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    let imagePicker = UIImagePickerController()
+    
     
     @IBOutlet weak var imageDisplay: UIImageView!
     
     @IBAction func saveData(sender: UIButton) {
-        if let managedContext = appDelegate.managedObjectContext
-        {
-            println("managedContext")
-            let entity =  NSEntityDescription.entityForName("Location",
-                inManagedObjectContext: managedContext)
-            let person = NSManagedObject(entity: entity!,
-                insertIntoManagedObjectContext: managedContext)
-            person.setValue(text.text, forKey: "name")
-            let error = NSErrorPointer()
-            managedContext.save(error)
+        let managedContext = appDelegate.managedObjectContext
+        let entity =  NSEntityDescription.entityForName("Location",
+            inManagedObjectContext: managedContext)
+        let person = NSManagedObject(entity: entity!,
+            insertIntoManagedObjectContext: managedContext)
+        person.setValue(text.text, forKey: "name")
+        //let error = NSErrorPointer()
+        do {
+            try managedContext.save()
+        } catch  {
+            print("Invalid File.")
         }
     }
     @IBAction func clearData(sender: UIButton) {
         
-        if let managedContext = appDelegate.managedObjectContext
-        {
-            let fetchRequest = NSFetchRequest(entityName: "Location")
-            let error = NSErrorPointer()
-            let data = managedContext.executeFetchRequest(fetchRequest, error: error)
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "Location")
+        //let error = NSErrorPointer()
+        do {
+            let data = try managedContext.executeFetchRequest(fetchRequest)
             let results = data as! [NSManagedObject]
             for result in results {
                 managedContext.deleteObject(result)
             }
+        } catch  {
+            print("Invalid File.")
         }
     }
     @IBAction func loadData(sender: UIButton) {
-        if let managedContext = appDelegate.managedObjectContext {
-            let fetchRequest = NSFetchRequest(entityName: "Location")
-            let error = NSErrorPointer()
-            let results = managedContext.executeFetchRequest(fetchRequest, error: error)
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "Location")
+            //let error = NSErrorPointer()
+        do {
+            let results = try managedContext.executeFetchRequest(fetchRequest)
             let people = results as! [NSManagedObject]
             if let name: AnyObject = people.last?.valueForKey("name") {
                 label.text = "\(name)"
             }
+        } catch  {
+            print("Invalid File.")
         }
         
     }
@@ -79,31 +87,29 @@ class CoreDataTest: UIViewController, UINavigationControllerDelegate, UIImagePic
     func loadImageFromPath(path: String) -> UIImage? {
         let image = UIImage(contentsOfFile: path)
         if image == nil {
-            println("missing image at: \(path)")
+            print("missing image at: \(path)")
         }
-        println("Loading image from path: \(path)")
+        print("Loading image from path: \(path)")
         return image
         
     }
     
     @IBAction func LoadImageButton(sender: UIButton) {
         let imagePath = fileInDocumentsDirectory("9296984.png")
-        let image = loadImageFromPath(imagePath)
+        //let image = loadImageFromPath(imagePath)
         imageDisplay.image = UIImage(named: "9296984")
     }
     
-    var imagePicker: UIImagePickerController!
     @IBAction func takePhoto(sender: UIButton) {
-        imagePicker =  UIImagePickerController()
-        imagePicker.delegate = self
-        //imagePicker.sourceType = .Camera
-        
+        imagePicker.sourceType = .Camera
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        imagePicker.dismissViewControllerAnimated(true, completion: nil)
-        imageDisplay.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        imageDisplay.contentMode = .ScaleAspectFit
+        imageDisplay.image = image
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func saveName(name: String) {
@@ -112,6 +118,8 @@ class CoreDataTest: UIViewController, UINavigationControllerDelegate, UIImagePic
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imagePicker.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
     
