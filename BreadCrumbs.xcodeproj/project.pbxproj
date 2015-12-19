@@ -11,6 +11,7 @@
 		6C80B9981C15D71D00AF90BA /* photo_camera_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C80B9941C15D71D00AF90BA /* photo_camera_2.png */; };
 		6C80B9991C15D71D00AF90BA /* Photo_Photograph_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C80B9951C15D71D00AF90BA /* Photo_Photograph_1.png */; };
 		6C80B99A1C15D71D00AF90BA /* Photo_Photograph_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C80B9961C15D71D00AF90BA /* Photo_Photograph_2.png */; };
+		7FE942611C24ED2400F3A86B /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE942601C24ED2300F3A86B /* LocationData.swift */; };
 		F0445C6D1C19F6B3002A5D62 /* CoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0445C6C1C19F6B3002A5D62 /* CoreDataTest.swift */; };
 		F0445C701C19F8DF002A5D62 /* LocationData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0445C6E1C19F8DF002A5D62 /* LocationData.xcdatamodeld */; };
 		F06CD39D1C1612DE007FEC23 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06CD39C1C1612DE007FEC23 /* MapKit.framework */; };
@@ -41,6 +42,7 @@
 		6C80B9941C15D71D00AF90BA /* photo_camera_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_camera_2.png; sourceTree = "<group>"; };
 		6C80B9951C15D71D00AF90BA /* Photo_Photograph_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photo_Photograph_1.png; sourceTree = "<group>"; };
 		6C80B9961C15D71D00AF90BA /* Photo_Photograph_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photo_Photograph_2.png; sourceTree = "<group>"; };
+		7FE942601C24ED2300F3A86B /* LocationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
 		F0445C6C1C19F6B3002A5D62 /* CoreDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTest.swift; sourceTree = "<group>"; };
 		F0445C6F1C19F8DF002A5D62 /* LocationData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocationData.xcdatamodel; sourceTree = "<group>"; };
 		F06CD39C1C1612DE007FEC23 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -115,6 +117,7 @@
 				F0AAD5791C0E14A400F242F9 /* Supporting Files */,
 				F0445C6C1C19F6B3002A5D62 /* CoreDataTest.swift */,
 				F0445C6E1C19F8DF002A5D62 /* LocationData.xcdatamodeld */,
+				7FE942601C24ED2300F3A86B /* LocationData.swift */,
 			);
 			path = BreadCrumbs;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				F0445C6D1C19F6B3002A5D62 /* CoreDataTest.swift in Sources */,
 				F0AAD57E1C0E14A400F242F9 /* ViewController.swift in Sources */,
 				F0AAD57C1C0E14A400F242F9 /* AppDelegate.swift in Sources */,
+				7FE942611C24ED2400F3A86B /* LocationData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
