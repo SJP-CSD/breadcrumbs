@@ -36,6 +36,19 @@ class CoreDataTest: UIViewController, UINavigationControllerDelegate, UIImagePic
     
     @IBOutlet weak var imageDisplay: UIImageView!
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "ShowList":
+                if let vc = segue.destinationViewController as? SavedMapsTableViewController {
+                    vc.cd = self
+                }
+            default: break
+            }
+        }
+    }
+    
     @IBAction func saveData(sender: UIButton) {
         let managedContext = appDelegate.managedObjectContext
         let entity =  NSEntityDescription.entityForName("Map",
@@ -52,9 +65,11 @@ class CoreDataTest: UIViewController, UINavigationControllerDelegate, UIImagePic
                 locationData.location = CLLocationCoordinate2D(latitude: n1 as Double, longitude: n2 as Double)
                 
                 let image = imageDisplay.image
-                let uniqueURL = "image" + "\(NSUUID())"
-                saveImage(image!, path: uniqueURL)
-                locationData.photos = [uniqueURL, uniqueURL]
+                
+                if let image = image {
+                    let uniqueURL = saveImage(image)
+                    locationData.photos = [uniqueURL, uniqueURL]
+                }
                 
                 let mapData: [LocationData] = [locationData, locationData]
                 let data = NSKeyedArchiver.archivedDataWithRootObject(mapData)
@@ -99,7 +114,9 @@ class CoreDataTest: UIViewController, UINavigationControllerDelegate, UIImagePic
                     numberField1.text = "\(value.latitude)"
                     numberField2.text = "\(value.longitude)"
                     let photos = data.photos as [String]
-                    imageDisplay.image = loadImageFromPath(photos.first!)
+                    if let photo = photos.first{
+                        imageDisplay.image = loadImageFromPath(photo)
+                    }
                 }
             }
         } catch  {
@@ -107,12 +124,44 @@ class CoreDataTest: UIViewController, UINavigationControllerDelegate, UIImagePic
         }
         
     }
+    
+    func getData() -> ([NSManagedObject]){
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "Map")
+        var nameString = ""
+        var dataArray: [LocationData] = []
+        var mapArray: [NSManagedObject] = []
+        do {
+            
+            let results = try managedContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
+            mapArray = results
+            if let name: AnyObject = results.last?.valueForKey("name") {
+                nameString = name as! String
+            }
+            if let rawLocation = results.last?.valueForKey("data") {
+                let location = NSKeyedUnarchiver.unarchiveObjectWithData(rawLocation as! NSData) as! [LocationData]
+                dataArray = location
+            }
+        } catch  {
+            print("Invalid File.")
+        }
+        return (mapArray)
+    }
 
     func saveImage (image: UIImage, path: String ){
         if let data = UIImagePNGRepresentation(image) {
             let filename = getDocumentsDirectory().stringByAppendingPathComponent(path)
             data.writeToFile(filename, atomically: true)
         }
+    }
+    
+    func saveImage (image: UIImage) -> String{
+        let uniqueURL = "image" + "\(NSUUID())"
+        if let data = UIImagePNGRepresentation(image) {
+            let filename = getDocumentsDirectory().stringByAppendingPathComponent(uniqueURL)
+            data.writeToFile(filename, atomically: true)
+        }
+        return uniqueURL
     }
     
     func getDocumentsDirectory() -> NSString {
