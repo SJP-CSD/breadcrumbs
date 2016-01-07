@@ -23,7 +23,7 @@ class AnnotationView: MKAnnotationView {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         
         if let mapAnnotation = self.annotation as? Annotation {
-        image = (mapAnnotation.isPin) ? UIImage(named: "pin resized"):UIImage(named: "pathdot resized")
+        image = (mapAnnotation.isPin) ? UIImage(named: "pin"):UIImage(named: "pathdot")
         }
     }
 }

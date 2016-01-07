@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class ActiveMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     let locationManager = CLLocationManager()
     var didPressButton = false
@@ -87,7 +87,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             didInit = true
         }
         else if follow {
-            var span = mapView.region.span
+            let span = mapView.region.span
             mapView.setRegion(MKCoordinateRegionMake(locValue, span), animated: true)
         }
         if drawPath {
@@ -105,7 +105,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 
 }
 
-extension MapViewController {
+extension ActiveMapViewController {
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = AnnotationView(annotation: annotation, reuseIdentifier: "Map")
         annotationView.canShowCallout = true

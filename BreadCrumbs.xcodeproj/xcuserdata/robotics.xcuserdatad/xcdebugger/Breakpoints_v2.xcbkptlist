@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BreadCrumbs/MapViewController.swift"
-            timestampString = "471986924.584006"
+            filePath = "BreadCrumbs/CoreDataTest.swift"
+            timestampString = "471985285.100681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "locationManager(_:didUpdateLocations:)"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "saveData(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
